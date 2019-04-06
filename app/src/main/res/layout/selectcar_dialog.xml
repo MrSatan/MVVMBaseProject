@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.srp.carwash.ui.login.selectcar.SelectCarViewModel"/>
+    </data>
+
+<LinearLayout
+
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:textColor="@color/white"
+        android:text="@string/SelectCarDialog_title"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+   <NumberPicker
+       android:id="@+id/carpicker"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+
+   </NumberPicker>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_30sdp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_confirm_dialog_car"
+            android:textColor="@color/white"
+            android:background="#20B325"
+            android:text="Confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_cancel_dialog_car"
+            android:textColor="@color/white"
+            android:background="@color/red_cancel"
+            android:text="Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>
+</layout>

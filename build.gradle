@@ -1,0 +1,73 @@
+/*
+ *  Copyright (C) 2017 MINDORKS NEXTGEN PRIVATE LIMITED
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      https://mindorks.com/license/apache-v2
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License
+ */
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url 'https://maven.google.com' }
+        maven { url "https://jitpack.io" }
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// Define versions in a single place
+ext {
+    // Sdk and tools
+    minSdkVersion = 16
+    targetSdkVersion = 28
+    compileSdkVersion = 28
+    buildToolsVersion = '28.0.3'
+
+    // App dependencies
+    supportLibraryVersion = '1.0.0-beta01'
+    gsonVersion = '2.8.2'
+    calligraphyVersion = '2.2.0'
+    glideVersion = '3.7.0'
+    roomDatabase = '2.1.0-alpha04'
+    rx2FastAndroidNetworking = '1.0.1'
+
+    dagger2Version = '2.16'
+    rxjava2Version = '2.1.9'
+    rxandroidVersion = '2.1.0'
+    placeholderviewVersion = '0.6.1'
+    debugDBVersion = '1.0.3'
+    timberVersion = '4.5.1'
+    lifecycle = '2.1.0-alpha04'
+
+    // Test dependencies
+    junitVersion = '4.12'
+    espressoVersion = '3.1.0-alpha4'
+    mockitoVersion = '2.15.0'
+}
